@@ -254,7 +254,7 @@ function repeatedQuestion() {
 
         "To sabendo que você já perguntou essa pra alguma bola daqui, e eu não vou desmerecer o trabalho dela te respondendo novamente.",
 
-        "Talvez a resposta pra sua pergunta seja dada com outra pergunta...",
+        "Talvez a você consiga uma respota se fizer outra pergunta...",
 
         "Você tá insistindo tanto nessa pergunta que só de pirraça eu vou responder com outra pergunta: tem certeza que quer que eu responda?",
 

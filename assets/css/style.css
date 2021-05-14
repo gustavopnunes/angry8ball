@@ -124,6 +124,7 @@ header h1 {
     right: 50%;
     transform: translate(50%, -50%);
     width: 90vw;
+    max-width: 1300px;
     background-color: rgb(46, 46, 46);
     border: 2px solid gray;
     font-size: 1.1rem;
