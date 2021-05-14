@@ -227,7 +227,7 @@ function ball7() {
 
         "Quase que você acerta a bola, só errou por uma...",
 
-        "Um gato tem 7 vidas e eu tenho sete motivos pra não te responder agora.",
+        "Um gato tem 7 vidas e eu tenho sete motivos pra não te responder agora. Um deles é que eu não sou a bola 8.",
 
         "Sua resposta deve estar na bola à esquerda. Tente novamente quando souber qual lado é o esquerdo.",
 
