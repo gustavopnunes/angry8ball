@@ -1,0 +1,231 @@
+html, body, div, h1, h2, p, header, main, footer {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    background-color: rgb(44, 44, 44);
+    color: blanchedalmond;
+    font-family: monospace;
+}
+
+header {
+    font-family: 'Dela Gothic One', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+header .header__img {
+    margin-top: 4px;
+    width: 35%;
+    max-width: 220px;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    color: rgb(21, 255, 0);
+    text-shadow: -2px 4px 5px rgb(137 150 150);
+}
+
+.game__container {
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.game__instructions {
+    font-family: monospace;
+    padding: 8px;
+    text-align: center;
+    max-width: 720px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.game-balls-space {
+    margin: 4px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
+    min-height: 95px;
+    max-height: 150px;
+}
+
+.balls {
+    max-width:220px;
+    width: 70%;
+    box-shadow: ;
+}
+
+.balls:hover {
+    width: 75%;
+    transition: 0.1s ease;
+}
+
+.game__question-input {
+    width: 90vw;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 642px;
+    margin: 16px auto;
+    padding-left: 8px;
+    background-color: rgba(255, 255, 255, 0.918);
+}
+
+.answer-space {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -3px 0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 8px;
+    width: 95vw;
+    max-width: 650px;
+    max-height: 500px;
+    height: 20vh;
+    background-color: rgb(46, 46, 46);
+}
+
+.tips-btn__input {
+    border: none;
+    background-color: blanchedalmond;
+    height: 24px;
+    width: 124px;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-bottom: 80px;
+    font-size: 1rem;
+}
+
+.tips-btn__input:hover {
+    background-color: rgb(231, 209, 177);
+}
+
+.modal {
+    padding: 4px 8px 32px 8px;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 90vw;
+    background-color: rgb(46, 46, 46);
+    border: 2px solid gray;
+    font-size: 1.1rem;
+    border-radius: 3px;
+}
+
+.modal p {
+    margin-top: 12px;
+}
+
+.modal input {
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100px;
+    margin: 0px auto 4px auto;
+    background-color:blanchedalmond;
+    border: none;
+    border-radius: 2px;
+    height: 28px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.modal li {
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 360px) {
+
+    .game__instructions, .answer-space {
+        font-size: 1rem;
+    }
+
+    .answer-space {
+        height: 28vh;
+    }
+
+    header .header__img {
+        width: 30%;
+    }
+
+    footer{ 
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 400px) {
+    .game-balls-space {
+        margin: 4px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 650px;
+        min-height: 160px;
+        max-height: 160px;
+    }
+}
+
+@media (min-width: 800px ) {
+    .modal {
+        font-size: 1.5rem;
+    }
+    .game-balls-space {
+        margin: 4px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 650px;
+        min-height: 170px;
+        max-height: 150px;
+    }
+    .tips-btn__input {
+        border: none;
+        background-color: blanchedalmond;
+        height: 24px;
+        width: 124px;
+        border-radius: 2px;
+        font-weight: 600;
+        margin: 15px auto 48px auto;
+        font-size: 1rem;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    
+}
