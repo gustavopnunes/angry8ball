@@ -74,17 +74,14 @@ BALLS.forEach(item => {
         } else { // if any ball are still visible, event will detect what ball was clicked and call her function
             switch (clickedBall) {
                 case "ball4":
-                    console.log(currentlyQuestion);
                     chooseAnswer(currentlyQuestion, ball4Answers, "20%");
                     break;
 
                 case "ball8":
-                    console.log("clicou na bola 8");
                     chooseAnswer(currentlyQuestion, ball8Answers, "55%");
                     break;
 
                 case "ball7": 
-                console.log("clicou na bola 7");
                 chooseAnswer(currentlyQuestion, ball7Answers, "92%");
                 break;
             }
@@ -159,7 +156,6 @@ function displayAnswer(answer, arrowPosition) {
     let p = document.createElement("p");
     p.textContent = answer;
     BALLOON.appendChild(p);
-    console.log(BALLOON);
     repeatedInputs.push(currentlyQuestion);
 }
 
