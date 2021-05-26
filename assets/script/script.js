@@ -21,8 +21,7 @@
 //  ##  linkedin:   https://www.linkedin.com/in/gustavopnunes/                                                                          #
 // ######################################################################################################################################
 
-
-// setting all project vars (yeah, we no more use 'var', we use 'let' now, you dinosaur)
+// setting all project vars
 const ROOT = document.querySelector(":root");
 const QUESTIONINPUT = document.getElementById("question-input");
 const OPENTIPSBTN = document.getElementById("open-tips-btn");
@@ -42,15 +41,18 @@ let ball4Opacity = "";
 let ball8Opacity = "";
 let ball7Opacity = "";
 
+QUESTIONINPUT.addEventListener("click", () => {
+    QUESTIONINPUT.value = "";
+})
+
 // defining button to open tips modal
-OPENTIPSBTN.addEventListener("click", function() {
+OPENTIPSBTN.addEventListener("click", () => {
     openModal(addTips());
 });
 
-SHOWCREDITS.addEventListener("click", function() {
+SHOWCREDITS.addEventListener("click", () => {
     openModal(addCredits());
-})
-
+});
 
 // this event detect which ball was clicked and take specific actions for them
 BALLS.forEach(item => {
@@ -91,7 +93,6 @@ BALLS.forEach(item => {
 // end of 'clicking balls' event
 
 // function choosing answers, will show messages according to input kind
-
 // input kinds detected by this function are:
 //  ##  empty input;
 //  ##  no question mark input; 
@@ -100,7 +101,7 @@ BALLS.forEach(item => {
 //  ##  'normal' input (with question marks, not repeated and not empty)
 //  someday I'll be adding more handles, hope to find a better way to to this without this bunch of if /else.
 
-function chooseAnswer(currentlyQuestion, ballAnswers, arrowPosition)  {
+const chooseAnswer = (currentlyQuestion, ballAnswers, arrowPosition) => {
     if (currentlyQuestion === "") {
         if (emptyQuestion.length === 0) {
             currentlyAnswer = "Já que você não fala nada, eu é que não vou ficar falando sozinho. Falow!"
@@ -147,9 +148,9 @@ function chooseAnswer(currentlyQuestion, ballAnswers, arrowPosition)  {
 
 // function to write and show choosed answer inside the balloon.
 // it takes the choosed answer from choosed ball function and, after display it, insert it in an array with for answers.
-function displayAnswer(answer, arrowPosition) {
+const displayAnswer = (answer, arrowPosition) => {
     BALLOON.classList.remove("hidden");
-    // that var for balloon arrow position in css is changed here. I'm proud I found a good way to do this. 
+    // that var for balloon arrow position in css is changed here.
     // It takes the ideal arrow position on balloon for each ball when ball's event call.
     ROOT.style.setProperty("--balloon-position", arrowPosition) 
     BALLOON.innerHTML = "";
@@ -160,13 +161,13 @@ function displayAnswer(answer, arrowPosition) {
 }
 
 // a little function to make a ball go away when angry
-function ballLeaving(ballId) {
+const ballLeaving = ballId => {
     let ball = document.getElementById(clickedBall);
     ball.style.transition = "2s ease";
     ball.style.opacity = "0";
 }
 
-function openModal(content) {
+const openModal = content => {
     MODAL.style.display = "flex";
     let closeBtn = document.createElement("input");
     closeBtn.value = "Fechar";
@@ -174,11 +175,8 @@ function openModal(content) {
     closeBtn.id = "close-modal-btn"
     closeBtn.classList.add("modal__close-btn");
     MODAL.appendChild(closeBtn);
-
     const CLOSEMODALBTN = document.getElementById("close-modal-btn");
-
     CLOSEMODALBTN.addEventListener("click", function() {
         MODAL.style.display = "none";
     });
 }
-
