@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="#">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Angry 8 Ball</title>
 </head>
 <body id = "page-body">
     <header>
         <div class="logo">
-            <img src = "assets/img/logo.png" class = "header__img">
-            <h1> Grumpy 8 Ball</h1>
+            <h1> Angry 8 Ball</h1>
         </div>
     </header>
     <main>
         <div class="game__container">
             <div class="game game__instructions">
-                Sou seu cigano virtual e vou responder tudo que você perguntar, mas só quando eu quiser.
+                Vou responder tudo que você perguntar, mas só quando eu quiser.
             </div>
             <div class="game game__question-box">
-                <input class="game__question-input" type="text" name="question" id="question-input" placeholder="Pergunta aí, tenta a sorte...": ">
+                <input class="game__question-input" type="text" name="question" id="question-input" placeholder="Faça sua pergunta e clique na bola 8.": ">
             </div>
-            <div class="game-balls-space">
-
+            <div class="game-balls-space" id = "balls-space">
                 <div class="game-balls ball-4">
                     <img src="assets/img/ball-4.png"class = "balls" id="ball4">
                 </div>
-
-                <div class = " game-ballsball-8">
+                <div class = " game-balls ball-8">
                     <img src="assets/img/logo.png" class = "balls" id="ball8">
                 </div>
-
                 <div class="game-balls ball-7">
                     <img src = "assets/img/ball-7.png" class = "balls" id="ball7">
                 </div>
-
             </div>
-            <div class="game answer-space">
-
-                </div>
-                <div class = "tips-button">
-                    <input class = "tips-btn__input" type="button" value="Me ajuda aí!" id = "tips-btn">
+            <div class = "answer-balloon hidden" id = "balloon">
+            </div>
+                <div class = "button">
+                    <input type="button" value="Me ajuda aí!" class = "modal__btn open-tips__btn" id = "open-tips-btn">
             </div>
         </div>
-        <div class="modal hidden" id = "modal-tips">
-        <p>As respostas variam de acordo com a maneira que a pergunta foi feita e a bola que foi clicada.
-        <p>Sabemos que você está aqui apenas para causar a discórdia, então, para irritar o Grumpy, você pode tentar:</p>
-            <ul>
-                <li>Fazer perguntas em branco;</li>
-                <li>Fazer perguntas sem ponto de interrogação;</li>
-                <li>Repetir as mesmas perguntas;</li>
-                <li>Ou perguntar algo sério...</li>
-            </ul>
-            <input type="button" value="Fechar" id = "close-modal-button">
+        <div class="modal-space" id = "modal">
+            <input type="button" value="teste">
         </div>
-        </main>
+    </main>
         <footer>
-            <p>Desenvolvido por Gustavo P. Nunes, com grande ajuda dos meus colegas da Kenzie Academy Brasil</p>
+            <p>Made by Gustavo P. Nunes <a href ="#" id = "show-credits-link"><u>- Credits -</u></a></p>
         </footer>
     <script src="assets/script/script.js"></script>
+    <script src="assets/script/answers.js"></script>
+    <script src="assets/script/tips.js"></script>
+    <script src ="assets/script/credits.js"></script>
 </body>
 </html>
