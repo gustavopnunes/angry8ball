@@ -12,3 +12,6 @@ Jogo desenvolvido baseado no clássico "Magic 8 Ball", no qual o usuário faz um
 - CSS3
 - HTML5
 - Spotify (horas e horas de playlists de rock 'n' roll)
+
+### Link: 
+https://gustavopnunes.github.io/angry8ball/
